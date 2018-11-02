@@ -12,7 +12,10 @@ RCT_EXPORT_MODULE()
 - (UIView *)view
 {
     if (@available(iOS 11.0, *)) {
-        return [[AVRoutePickerView alloc] init];
+        AVRoutePickerView *view = [[AVRoutePickerView alloc] init];
+        view.activeTintColor = [UIColor blackColor];
+        view.tintColor = [UIColor blackColor];
+        return view;
     } else {
         // Fallback on earlier versions
         return [[UIView alloc] init];
