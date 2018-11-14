@@ -15,6 +15,7 @@ RCT_EXPORT_MODULE()
         AVRoutePickerView *view = [[AVRoutePickerView alloc] init];
         view.activeTintColor = [UIColor blackColor];
         view.tintColor = [UIColor blackColor];
+        view.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.5, 1.5);
         return view;
     } else {
         // Fallback on earlier versions
